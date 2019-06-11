@@ -1,0 +1,252 @@
+.box11{
+  padding: 1em 1em;
+  margin: 2em 0.5em;
+  color: #000000;
+  background: white;
+  border-top: solid 10px #0000ff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.box11 p {
+  margin: 0; 
+  padding: 0;
+}
+
+
+.map {width:900px; height:600px; }
+
+.mapboxgl-accessibility-marker {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border-radius: 0;
+  border: none;
+  position: fixed;
+}
+
+.mapboxgl-accessibility-marker:focus {
+  border: 2px solid black;
+}
+
+
+.noprint{
+
+}
+.notprint{
+
+}
+
+.nonprint{
+
+}
+
+.contents{
+	background-color:#c9d6f3;
+}
+
+.marker {
+  background-image: url('icon1.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  icon-rotate: 30deg;
+}
+
+
+.direction0 {
+  background-image: url('direction/direction0.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.direction15 {
+  background-image: url('direction/direction15.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.direction30 {
+  background-image: url('direction/direction30.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction45 {
+  background-image: url('direction/direction45.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction60 {
+  background-image: url('direction/direction60.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction75 {
+  background-image: url('direction/direction75.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction90 {
+  background-image: url('direction/direction90.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction105 {
+  background-image: url('direction/direction105.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction120 {
+  background-image: url('direction/direction120.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction135 {
+  background-image: url('direction/direction135.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction150 {
+  background-image: url('direction/direction150.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction165 {
+  background-image: url('direction/direction165.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction180 {
+  background-image: url('direction/direction180.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction195 {
+  background-image: url('direction/direction195.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction210 {
+  background-image: url('direction/direction210.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction225 {
+  background-image: url('direction/direction225.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction240 {
+  background-image: url('direction/direction240.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction255 {
+  background-image: url('direction/direction255.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction270 {
+  background-image: url('direction/direction270.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction285 {
+  background-image: url('direction/direction285.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction300 {
+  background-image: url('direction/direction300.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction315 {
+  background-image: url('direction/direction315.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction330 {
+  background-image: url('direction/direction330.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.direction345 {
+  background-image: url('direction/direction345.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+

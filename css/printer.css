@@ -1,0 +1,29 @@
+@page { size:landscape; }
+
+body {
+-webkit-print-color-adjust: exact;
+
+}
+
+.map { 
+  top:0; 
+  bottom:0;
+  zoom: 1.5;
+}
+.contents{position: abusolute; left:100px; top:100px;}
+
+.noprint{display:none;}
+.notprint{display:none;}
+.nonprint{display:none;}
+
+
+.marker {
+  background-image: url('icon1.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
