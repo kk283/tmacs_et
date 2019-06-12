@@ -90,172 +90,176 @@
 </head>
   
 <body onload='init()'>
-	<div class = "row">
-		<div class="col-md-8">
-			<div class="notprint">
-				<div class="box11">
-					<h3>自動触地図作成webアプリ</h3>
-					<h4>触地図の作成、編集をおこなうことができます。
-						<br>背景地図ありと白地図の２つが選べます。
-					</h4>
-				</div>
+	<header>
+		<div class="notprint">
+			<div class="box11">
+				<h3>自動触地図作成webアプリ</h3>
+				<h4>触地図の作成、編集をおこなうことができます。
+					<br>背景地図ありと白地図の２つが選べます。
+				</h4>
 			</div>
+		</div>
+	</header>
+	<div class="container-fluid">
+		<div class = "row">
+		<div class= col-lg-8>
 			<div id='map' class="map"></div>
 		</div>
-		<div class="col-md-4 mt-5">
-			<div class="card"></div>
-			<div class = "noprint">
-				<div class="card card-primary h-50">
-					<div class ="card-heading bg-primary text-white h-50" >
-						<h3 class= "mx-auto">設定パネル</h3>
-					</div>
-					<div class = "card-body">
-						<table class = "table">
-							<tbody>
-								<tr>
-									<td>
-										<label><h4>場所</h4></label>
-									</td>
-									<td class="text-left">
-										<div class="input-group">
-											<input type="text" class="form-control" id="keyword" placeholder="検索したい場所を入力">
-										</div>
-										<div>
-											<span class="input-group-btn">
-												<button class="btn btn-primary" type="button" id="search_icon">検索</button>
-												<button class="btn btn-primary" type="button" id="myplace_icon">現在地</button>
-											</span>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<label><h4>縮尺 </h4></label>
-									</td>
-									<td class="text-left">
-										<div  class="btn-group" data-toggle="buttons"  id="zoomL">
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="0.5" value="拡大"> 
-											</label>
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="-0.5" value="縮小"> 
-											</label>
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="16.5" value="リセット"> 
-											</label>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<label><h4>向き </h4></label>
-									</td>
-									<td class="text-left">
-										<div  class="btn-group" data-toggle="buttons"  id="direction">
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="right" value="右"> 
-											</label>
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="left" value="左"> 
-											</label>
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="reset" value="リセット"> 
-											</label>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<label><h4>編集 </h4> </label>
-									</td>
-									<td class="text-left">
-										<input type="button" value="表示" onclick="clickBtn1()" />
-										<div id="show_hidden">
+			<div class="col-lg-4">
+				<div class="card"></div>
+				<div class = "noprint">
+					<div class="card card-primary h-50">
+						<div class ="card-heading bg-primary text-white h-50" >
+							<h3 class= "mx-auto">設定パネル</h3>
+						</div>
+						<div class = "card-body">
+							<table class = "table">
+								<tbody>
+									<tr>
+										<td>
+											<label><h4>場所</h4></label>
+										</td>
+										<td class="text-left">
 											<div class="input-group">
-												<input type="text" class="form-control" id="nameG" placeholder="点字（ひらがな）">
-												<input type="text" class="form-control" id="nameI" placeholder="墨字">
-												<span class="input-group-btn">
-													<button class="btn btn-primary" type="button" id="nameget">決定</button>
-												</span>
-												<span class = "input-group">
-													<div>
-														<form name="radio">
-															<div class="radio">
-																<label class="btn btn-primary"><input type="radio" name="radio" id="off">編集OFF</label>
-																<label class="btn btn-primary"><input type="radio" name="radio" id="brail">点字</label>
-																<label class="btn btn-primary"><input type="radio" name="radio" id="ink">墨字</label>
-																<label class="btn btn-primary"><input type="radio" name="radio" id="marker">マーカー</label>
-																<label class="btn btn-primary"><input type="radio" name="radio" id="dr">方角</label>
-															</div>
-														</form>
-														<button class="btn btn-primary" type="button" id="remove">削除</button>
-													</div>
-												</span>
+												<input type="text" class="form-control" id="keyword" placeholder="検索したい場所を入力">
 											</div>
 											<div>
-												<select id='layer' name= 'layer'>
-													<option value=''>レイヤ選択</option>
-													<option value='building'>建物</option>
-													<option value='landuse'>私有地</option>
-													<option value='service'>敷地内道路</option>
-													<option value='rail'>線路</option>
-													<option value='trunk'>国道</option>
-													<option value='secondary'>一般都道府県道路</option>
-													<option value='tertiary'>市町村道</option>
-													<option value='path'>小道</option>
-													<option value='pedestrian'>歩道</option>
-													<option value='primary'>主要地方道</option>
-													<option value='street'>未分類道路</option>
-												</select>
-			
-												<div  class="btn-group" data-toggle="buttons"  id="color">
-													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="OFF" value="OFF"> 
-													</label>
-													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="ON" value="ON"> 
-													</label>
-													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="white" value="白"> 
-													</label>
-													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="gray" value="灰色"> 
-													</label>
-													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="black" value="黒"> 
-													</label>
+												<span class="input-group-btn">
+													<button class="btn btn-primary" type="button" id="search_icon">検索</button>
+													<button class="btn btn-primary" type="button" id="myplace_icon">現在地</button>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label><h4>縮尺 </h4></label>
+										</td>
+										<td class="text-left">
+											<div  class="btn-group" data-toggle="buttons"  id="zoomL">
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="0.5" value="拡大"> 
+												</label>
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="-0.5" value="縮小"> 
+												</label>
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="16.5" value="リセット"> 
+												</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label><h4>向き </h4></label>
+										</td>
+										<td class="text-left">
+											<div  class="btn-group" data-toggle="buttons"  id="direction">
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="right" value="右"> 
+												</label>
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="left" value="左"> 
+												</label>
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="reset" value="リセット"> 
+												</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label><h4>編集 </h4> </label>
+										</td>
+										<td class="text-left">
+											<input type="button" value="表示" onclick="clickBtn1()" />
+											<div id="show_hidden">
+												<div class="input-group">
+													<input type="text" class="form-control" id="nameG" placeholder="点字（ひらがな）">
+													<input type="text" class="form-control" id="nameI" placeholder="墨字">
+													<span class="input-group-btn">
+														<button class="btn btn-primary" type="button" id="nameget">決定</button>
+													</span>
+													<span class = "input-group">
+														<div>
+															<form name="radio">
+																<div class="radio">
+																	<label class="btn btn-primary"><input type="radio" name="radio" id="off">編集OFF</label>
+																	<label class="btn btn-primary"><input type="radio" name="radio" id="brail">点字</label>
+																	<label class="btn btn-primary"><input type="radio" name="radio" id="ink">墨字</label>
+																	<label class="btn btn-primary"><input type="radio" name="radio" id="marker">マーカー</label>
+																	<label class="btn btn-primary"><input type="radio" name="radio" id="dr">方角</label>
+																</div>
+															</form>
+															<button class="btn btn-primary" type="button" id="remove">削除</button>
+														</div>
+													</span>
+												</div>
+												<div>
+													<select id='layer' name= 'layer'>
+														<option value=''>レイヤ選択</option>
+														<option value='building'>建物</option>
+														<option value='landuse'>私有地</option>
+														<option value='service'>敷地内道路</option>
+														<option value='rail'>線路</option>
+														<option value='trunk'>国道</option>
+														<option value='secondary'>一般都道府県道路</option>
+														<option value='tertiary'>市町村道</option>
+														<option value='path'>小道</option>
+														<option value='pedestrian'>歩道</option>
+														<option value='primary'>主要地方道</option>
+														<option value='street'>未分類道路</option>
+													</select>
+				
+													<div  class="btn-group" data-toggle="buttons"  id="color">
+														<label class="btn btn-primary">
+															<input type="button" class="btn btn-primary" name="options"  id="OFF" value="OFF"> 
+														</label>
+														<label class="btn btn-primary">
+															<input type="button" class="btn btn-primary" name="options"  id="ON" value="ON"> 
+														</label>
+														<label class="btn btn-primary">
+															<input type="button" class="btn btn-primary" name="options"  id="white" value="白"> 
+														</label>
+														<label class="btn btn-primary">
+															<input type="button" class="btn btn-primary" name="options"  id="gray" value="灰色"> 
+														</label>
+														<label class="btn btn-primary">
+															<input type="button" class="btn btn-primary" name="options"  id="black" value="黒"> 
+														</label>
+													</div>
 												</div>
 											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<label><h4>地図</h4></label>
-									</td>
-									<td class="text-left">
-										<div  class="btn-group" data-toggle="buttons"  id="backmap">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label><h4>地図</h4></label>
+										</td>
+										<td class="text-left">
+											<div  class="btn-group" data-toggle="buttons"  id="backmap">
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="backmaps" value="背景地図"> 
+												</label>
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="EasyTactix" value="白地図"> 
+												</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label><h4>印刷</h4></label>
+										</td>
+										<td class="text-left">
 											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="backmaps" value="背景地図"> 
+												<input class="btn btn-primary" type="button" value="印刷する" onclick="window.print();" />
 											</label>
-											<label class="btn btn-primary">
-												<input type="button" class="btn btn-primary" name="options"  id="EasyTactix" value="白地図"> 
-											</label>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<label><h4>印刷</h4></label>
-									</td>
-									<td class="text-left">
-										<label class="btn btn-primary">
-											<input class="btn btn-primary" type="button" value="印刷する" onclick="window.print();" />
-										</label>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
