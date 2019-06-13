@@ -116,7 +116,10 @@
 			} else if(BM == "EasyTactix"){
 				map.setStyle("mapbox://styles/kk765/cjwlo0tx648hx1cqonr4vnf2i");
 				document.getElementsByTagName('div').item(str).className = 'mapE';
+			} else if(BM == "defaultmap"){
+				map.setStyle("mapbox://styles/kk765/cjwubcqw80eds1cjx6gkd6fdc")
 			}
+
 		}
 		
 		function nameget(){
@@ -459,7 +462,7 @@
 			} else if(color == 'ON'){
 				map.setLayoutProperty(layer.value, 'visibility', 'visible');
 			}else if(color == 'white'){
-				map.setLayoutProperty(layer.value, 'visibility', 'none');
+				map.setPaintProperty(layer.value, 'line-color', '#ffffff');
 			} else if(color == 'gray'){
 				map.setPaintProperty(layer.value, 'line-color', '#424242');
 			} else if(color == 'black'){
