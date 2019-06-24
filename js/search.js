@@ -22,13 +22,13 @@ function successCallback_icon(position) {
           }]
     
     }
-    geojson.features.forEach(function(marker) {
-        el[i] = document.createElement('div');
-        el[i].className = 'marker';
-        new mapboxgl.Marker(el[i], {draggable: true})
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(map);
-    });
+    //geojson.features.forEach(function(marker) {
+      //  el[i] = document.createElement('div');
+        //el[i].className = 'marker';
+        //new mapboxgl.Marker(el[i], {draggable: true})
+        //.setLngLat(marker.geometry.coordinates)
+        //.addTo(map);
+    //}); 
 }
 
 function errorCallback(error) {
@@ -62,20 +62,20 @@ function search_icon() {
     
         }
     
-        geojson.features.forEach(function(marker) {
-            i = i + 1;
-            el[i] = document.createElement('div');
-            el[i].className = 'marker';
-            new mapboxgl.Marker(el[i], {
-                offset: [
-                     -26 / 2,
-                      -33 / 2
-                ],
-                draggable: true
-              })
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
-            });
+//       geojson.features.forEach(function(marker) {
+//           i = i + 1;
+//           el[i] = document.createElement('div');
+//           el[i].className = 'marker';
+//           new mapboxgl.Marker(el[i], {
+//               offset: [
+//                    -26 / 2,
+//                    -33 / 2
+//                ],
+//                draggable: true
+//             })
+//           .setLngLat(marker.geometry.coordinates)
+//           .addTo(map);
+//           });
     
             }
         };
