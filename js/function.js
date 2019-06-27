@@ -1,6 +1,7 @@
 
 var mytap = window.ontouchstart===null?"touchstart":"click";
 document.getElementById("show_hidden").style.display ="none";
+document.getElementById("BIshow").style.display ="none";
 
 function init(){
 
@@ -88,6 +89,15 @@ function init(){
 			colorChange(this.id);
 		});
 	});
+
+	$(function () {
+        $('#layer').multipleSelect({
+            width: 250,
+            placeholder:"選択して下さい",
+			selectAllText:"全部選ぶ",
+            multipleWidth: 200
+        });
+    });
 }
 		
 		

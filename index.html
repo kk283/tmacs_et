@@ -6,8 +6,10 @@
 	<title>tmacs_et</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">  
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/multiple-select.min.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/multiple-select.min.js"></script>
 	<link href='css/index.css' rel='stylesheet'>
 	<link rel="stylesheet" href='css/printer.css' media="print" type="text/css">
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
@@ -175,29 +177,27 @@
 											<input type="button" value="表示" onclick="clickBtn1()" />
 											<div id="show_hidden">
 												<div class="input-group">
-													<input type="text" class="form-control" id="nameG" placeholder="点字（ひらがな）">
-													<input type="text" class="form-control" id="nameI" placeholder="墨字">
-													<span class="input-group-btn">
-														<button class="btn btn-primary" type="button" id="nameget">決定</button>
-													</span>
 													<span class = "input-group">
 														<div>
-															<form name="radio">
-																<div class="radio">
-																	<label class="btn btn-primary"><input type="radio" name="radio" id="off">編集OFF</label>
-																	<label class="btn btn-primary"><input type="radio" name="radio" id="brail">点字</label>
-																	<label class="btn btn-primary"><input type="radio" name="radio" id="ink">墨字</label>
-																	<label class="btn btn-primary"><input type="radio" name="radio" id="marker">マーカー</label>
-																	<label class="btn btn-primary"><input type="radio" name="radio" id="dr">方角</label>
-																</div>
-															</form>
+															<select id='edit' onchange = "BIword()">
+																<option value ='off'>編集OFF</option>
+																<option value ='brail'>点字</option>
+																<option value ='ink'>墨字</option>
+																<option value ='marker'>マーカー</option>
+																<option value ='dr'>方角</option>>
+															</select>
+
 															<button class="btn btn-primary" type="button" id="remove">削除</button>
 														</div>
 													</span>
+													<div id = "BIshow">
+														<input type="text" class="form-control" id="nameG" placeholder="点字（ひらがな）">
+														<input type="text" class="form-control" id="nameI" placeholder="墨字">
+													</div>
 												</div>
+												<br>
 												<div>
-													<select id='layer' name= 'layer'>
-														<option value=''>レイヤ選択</option>
+													<select id='layer' name= 'layer' multiple="multiple">
 														<option value='building'>建物</option>
 														<option value='landuse'>私有地</option>
 														<option value='service'>敷地内道路</option>
@@ -275,6 +275,8 @@
 	<script type="text/javascript" src="js/icon.js"></script>
 	<script type="text/javascript" src="js/edit.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
+
+	
 	
 </body>
 

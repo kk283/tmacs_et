@@ -7,12 +7,25 @@ var el = new Array(i);
 var popup = new Array(p);
 var dr = new Array(d);
 var a = 0;
+var editType;
+
+function BIword(){
+	editType = document.getElementById("edit").value;
+	if(editType == 'brail' || editType == 'ink'){
+		const BI_show = document.getElementById("BIshow");
+		BIshow.style.display ="block";
+	}else{
+		BIshow.style.display ="none";
+	}
+}
  
 function onMapClick(e) {
       //地図のclickイベント呼び出される
-      //クリック地点の座標にマーカーを追加、マーカーのclickイベントでonMarkerClick関数を呼び出し
+	  //クリック地点の座標にマーカーを追加、マーカーのclickイベントでonMarkerClick関数を呼び出し
+	editType = document.getElementById("edit").value;
+	console.log(editType); 
       	
-    if(document.radio.marker.checked){
+    if(editType == 'marker'){
 		i = i + 1;
 		lnglat = e.lngLat;
 				
@@ -22,7 +35,7 @@ function onMapClick(e) {
 			.setLngLat(lnglat)
 			.addTo(map);
 				
-	} else if(document.radio.brail.checked){
+	} else if(editType == 'brail'){
 		const n = document.getElementById('nameG').value;
 		const Re_n = tactileGraphic().convertText(n);
 		p = p + 2;
@@ -33,7 +46,7 @@ function onMapClick(e) {
 			.setHTML(Re_n)
 			.addTo(map);
 
-	} else if(document.radio.ink.checked){
+	} else if(editType == 'ink'){
 		const ink = document.getElementById('nameI').value;
 		ink_i = ink_i + 2;
 		lnglat = e.lngLat;
@@ -42,7 +55,7 @@ function onMapClick(e) {
 			.setHTML(ink)
 			.addTo(map);
 
-	} else if(document.radio.dr.checked){
+	} else if(editType == 'dr'){
 		dd = dd + 1;
 		lnglat = e.lngLat;
 		dr[dd] = document.createElement('div');
@@ -174,16 +187,19 @@ function onMapClick(e) {
     
     
 function remove() {
-   	if(document.radio.marker.checked){
+	editType = document.getElementById("edit").value;
+	console.log(editType);
+
+   	if(editType == 'marker'){
    		el[i].remove();
    		i = i - 1;
-   	} else if(document.radio.brail.checked){
+   	} else if(editType == 'brail'){
    		popup[p].remove();
 		p = p - 2;
-   	} else if(document.radio.ink.checked){
+   	} else if(editType == 'ink'){
 		popup[ink_i].remove();
 		ink_i = ink_i - 2;
-	} else if(document.radio.dr.checked){
+	} else if(editType == 'dr'){
     	dr[dd].remove();
     	dd = dd - 1;
     }
