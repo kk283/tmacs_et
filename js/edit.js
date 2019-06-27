@@ -9,7 +9,7 @@ function lineonoff(onoff){
 }
  
 function colorChange(color){
-    var $select = $('select');
+    var $select = $('#layer');
     var layer = [];
     layer = $select.multipleSelect('getSelects', 'id');
     var length = layer.length;
@@ -17,7 +17,6 @@ function colorChange(color){
         if(layer[l] == 'service' || layer[l] == 'secondary' || layer[l] == 'tertiary' || layer[l] == 'street' || layer[l] =='path' || layer[l] == 'pedestrian'　|| layer[l] == 'primary' || layer[l] == 'track'　|| layer[l] == 'trunk' || layer[l] == 'rail'){
             if(color == 'OFF'){
                 map.setLayoutProperty(layer[l], 'visibility', 'none');
-                console.log(layer[l]);
             } else if(color == 'ON'){
                 map.setLayoutProperty(layer[l], 'visibility', 'visible');
             }else if(color == 'white'){
