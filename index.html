@@ -27,6 +27,7 @@
 		.popupBrail{
         	font: 18px 'ikarashi';
         	color: #000000;
+			background-color:#ffffff;
         	opacity: 1.0;
 		}
 		
@@ -42,7 +43,7 @@
 
 		
 		.mapboxgl-popup-content{
-			background-color: #ffffff;
+			background-color: #00000000;
 			box-shadow: none;
 		}
 		
@@ -194,6 +195,12 @@
 														<input type="text" class="form-control" id="nameG" placeholder="点字（ひらがな）">
 														<input type="text" class="form-control" id="nameI" placeholder="墨字">
 													</div>
+													<div id = "Mshow">
+														<form id = "Mchecked">
+															<input type="radio"   name ="markerselect" value="icon1">マーカー1
+															<input type="radio"   name ="markerselect" value="icon2">マーカー2
+														</form>
+													</div>
 												</div>
 												<br>
 												<div>
@@ -256,7 +263,8 @@
 										</td>
 										<td class="text-left">
 											<label class="btn btn-primary">
-												<input class="btn btn-primary" type="button" value="印刷する" onclick="window.print();" />
+												<input class="btn btn-primary" type="button" value="印刷" onclick="window.print();" />
+												<!--<a class="downloadLink" id="downloadLink" href="" download="map.png">保存 </a>-->
 											</label>
 										</td>
 									</tr>
@@ -268,6 +276,7 @@
 			</div>
 		</div>
 	</div>
+    <div id="image"></div>
 
 	
 	<script type="text/javascript" src="js/function.js"></script>
@@ -275,6 +284,12 @@
 	<script type="text/javascript" src="js/icon.js"></script>
 	<script type="text/javascript" src="js/edit.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
+	<script>
+	    $('#downloadLink').click(function() {
+        	var img = map.getCanvas().toDataURL('image/png')
+        	this.href = img
+    	})
+	</script>
 
 	
 	

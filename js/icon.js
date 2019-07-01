@@ -14,8 +14,10 @@ function BIword(){
 	if(editType == 'brail' || editType == 'ink'){
 		const BI_show = document.getElementById("BIshow");
 		BIshow.style.display ="block";
-	}else{
+		Mshow.style.display = "none"
+	}else if(editType=='marker'){
 		BIshow.style.display ="none";
+		Mshow.style.display = "block"
 	}
 }
  
@@ -28,12 +30,23 @@ function onMapClick(e) {
     if(editType == 'marker'){
 		i = i + 1;
 		lnglat = e.lngLat;
-				
-		el[i] = document.createElement('div');
-		el[i].className = 'marker';
-		new mapboxgl.Marker(el[i], {draggable: true})
-			.setLngLat(lnglat)
-			.addTo(map);
+		var checked = document.getElementById("Mchecked");
+		var Mclist = checked.markerselect;
+		var a = Mclist.value;
+		// 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+		if(a == "icon1"){
+			el[i] = document.createElement('div');
+			el[i].className = 'marker1';
+			new mapboxgl.Marker(el[i], {draggable: true})
+				.setLngLat(lnglat)
+				.addTo(map);
+		} else{
+			el[i] = document.createElement('div');
+			el[i].className = 'marker2';
+			new mapboxgl.Marker(el[i], {draggable: true})
+				.setLngLat(lnglat)
+				.addTo(map);
+		}
 				
 	} else if(editType == 'brail'){
 		const n = document.getElementById('nameG').value;
@@ -45,6 +58,7 @@ function onMapClick(e) {
 			.setLngLat(lnglat)
 			.setHTML(Re_n)
 			.addTo(map);
+		
 
 	} else if(editType == 'ink'){
 		const ink = document.getElementById('nameI').value;

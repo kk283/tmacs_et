@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="icon1.svg">
+   sodipodi:docname="icon2.svg">
   <defs
      id="defs2">
     <linearGradient
@@ -36,8 +36,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="-297.74758"
-     inkscape:cy="169.57864"
+     inkscape:cx="146.71954"
+     inkscape:cy="209.98474"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -71,18 +71,18 @@
        id="ellipse817"
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:8.13626766;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke" />
     <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.91241741;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.43059254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="ellipse819"
        cx="106.03901"
        cy="218.60214"
-       rx="14.66747"
-       ry="14.838318" />
+       rx="21.970259"
+       ry="21.606569" />
     <ellipse
-       ry="14.838318"
-       rx="14.66747"
-       cy="218.60214"
-       cx="106.03901"
+       cy="218.50174"
+       cx="106.3982"
        id="ellipse820"
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:5.91241741;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke" />
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.21884847;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       rx="5.6152868"
+       ry="5.4587488" />
   </g>
 </svg>

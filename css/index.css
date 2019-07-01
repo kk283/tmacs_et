@@ -44,14 +44,22 @@
 	background-color:#c9d6f3;
 }
 
-.marker {
+.marker1 {
   background-image: url('icon1.svg');
   background-size: cover;
   width: 75px;
   height: 75px;
   border-radius: 50%;
   cursor: pointer;
-  icon-rotate: 30deg;
+}
+
+.marker2 {
+  background-image: url('icon2.svg');
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 
@@ -248,5 +256,8 @@
   height: 75px;
   border-radius: 50%;
   cursor: pointer;
+}
+.downloadLink{
+  color: #ffffff;
 }
 

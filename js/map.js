@@ -5,7 +5,8 @@ const map = new mapboxgl.Map({
 	center: [138.943020, 37.866620],
 	zoom: 16.0,
 	doubleClickZoom: false,
-	dragRotate: false
+    dragRotate: false,
+    preserveDrawingBuffer: true
 });
 
 map.addControl(Draw, 'top-right');
@@ -98,4 +99,5 @@ if(show_hidden.style.display=="block"){
     show_hidden.style.display ="block";
 }
 }
+
 

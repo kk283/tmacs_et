@@ -2,6 +2,7 @@
 var mytap = window.ontouchstart===null?"touchstart":"click";
 document.getElementById("show_hidden").style.display ="none";
 document.getElementById("BIshow").style.display ="none";
+document.getElementById("Mshow").style.display ="none";
 
 function init(){
 
@@ -77,6 +78,7 @@ function init(){
 			nameget();
 		});
 	});
+	
 
 	$(function(){
 		$('#onoff input[type=button]').on('click',function(){
@@ -97,7 +99,9 @@ function init(){
 			selectAllText:"全部選ぶ",
             multipleWidth: 200
         });
-    });
+	});
+
+
 }
 		
 		
