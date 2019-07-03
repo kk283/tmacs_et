@@ -16,6 +16,7 @@
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
 	<script src = ' https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.4/mapbox-gl-draw.js'> </script>
 	<script src="js/tactileGraph.min.js"></script>
+	<script src="js/html2canvas.js"></script>
 
 	<style>
 			
@@ -106,7 +107,7 @@
 	<div class="container-fluid">
 		<div class = "row">
 		<div class= col-lg-8>
-			<div id='map' class="map"></div>
+			<div id="map" class="map"></div>
 		</div>
 			<div class="col-lg-4">
 				<div class="card"></div>
@@ -264,7 +265,7 @@
 										<td class="text-left">
 											<label class="btn btn-primary">
 												<input class="btn btn-primary" type="button" value="印刷" onclick="window.print();" />
-												<!--<a class="downloadLink" id="downloadLink" href="" download="map.png">保存 </a>-->
+												<a class="downloadLink" id="downloadLink" href="" download="map.png">保存 </a>
 											</label>
 										</td>
 									</tr>
@@ -285,11 +286,15 @@
 	<script type="text/javascript" src="js/edit.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
 	<script>
+		var a = 0;
 	    $('#downloadLink').click(function() {
-        	var img = map.getCanvas().toDataURL('image/png')
-        	this.href = img
-    	})
+
+        	var img = map.getCanvas().toDataURL('image/png');
+        	this.href = img;
+		});
+		  
 	</script>
+	 </div>
 
 	
 	

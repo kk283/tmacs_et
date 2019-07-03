@@ -6,7 +6,7 @@ var d = 0;
 var el = new Array(i);
 var popup = new Array(p);
 var dr = new Array(d);
-var a = 0;
+var aa = 0;
 var editType;
 
 function BIword(){
@@ -32,23 +32,22 @@ function onMapClick(e) {
 		lnglat = e.lngLat;
 		var checked = document.getElementById("Mchecked");
 		var Mclist = checked.markerselect;
-		var a = Mclist.value;
-		// 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
-		if(a == "icon1"){
+		var ma = Mclist.value;
+		if(ma == "icon1"){
 			el[i] = document.createElement('div');
 			el[i].className = 'marker1';
 			new mapboxgl.Marker(el[i], {draggable: true})
 				.setLngLat(lnglat)
 				.addTo(map);
+				var MapM = map.getStyle().layers;
+			console.log(MapM);
 		} else{
 			el[i] = document.createElement('div');
 			el[i].className = 'marker2';
 			new mapboxgl.Marker(el[i], {draggable: true})
 				.setLngLat(lnglat)
 				.addTo(map);
-		}
-				
-	} else if(editType == 'brail'){
+		}} else if(editType == 'brail'){
 		const n = document.getElementById('nameG').value;
 		const Re_n = tactileGraphic().convertText(n);
 		p = p + 2;
@@ -73,122 +72,123 @@ function onMapClick(e) {
 		dd = dd + 1;
 		lnglat = e.lngLat;
 		dr[dd] = document.createElement('div');
-		if(a == 0){
+		console.log(aa);
+		if(aa == 0){
 			dr[dd].className = 'direction0';
 			new mapboxgl.Marker(dr[dd], {draggable: true})
 			    .setLngLat(lnglat)
 				.addTo(map);
-			} else if (a == -15 || a == 355){
+			} else if (aa == -15 || aa == 355){
 				dr[dd].className = 'direction15';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -30 || a == 330){
+			}else if(aa == -30 || aa == 330){
 				dr[dd].className = 'direction30';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -45 || a == 315){
+			}else if(aa == -45 || aa == 315){
 				dr[dd].className = 'direction45';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -60 || a == 300){
+			}else if(aa == -60 || aa == 300){
 				dr[dd].className = 'direction60';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 				    .setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -75 || a == 285){
+			}else if(aa == -75 || aa == 285){
 				dr[dd].className = 'direction75';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -90 || a ==270){
+			}else if(aa == -90 || aa ==270){
 				dr[dd].className = 'direction90';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -105|| a == 255){
+			}else if(aa == -105|| aa == 255){
 				dr[dd].className = 'direction105';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -120|| a == 240){
+			}else if(aa == -120|| aa == 240){
 				dr[dd].className = 'direction120';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -135|| a == 225){
+			}else if(aa == -135|| aa == 225){
 				dr[dd].className = 'direction135';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -150|| a == 210){
+			}else if(aa == -150|| aa == 210){
 				dr[dd].className = 'direction150';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -165 || a == 195){
+			}else if(aa == -165 || aa == 195){
 				dr[dd].className = 'direction165';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -180 || a == 180){
+			}else if(aa == -180 || aa == 180){
 				dr[dd].className = 'direction180';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -195 || a == 165){
+			}else if(aa == -195 || aa == 165){
 				dr[dd].className = 'direction195';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -210 || a == 150){
+			}else if(aa == -210 || aa == 150){
 				dr[dd].className = 'direction210';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -225 || a == 135){
+			}else if(aa == -225 || aa == 135){
 				dr[dd].className = 'direction225';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -240 || a == 120){
+			}else if(aa == -240 || aa == 120){
 				dr[dd].className = 'direction240';
 				new mapboxgl.Marker(dr[dd], {draggable: true})					
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -255 || a == 105){
+			}else if(aa == -255 || aa == 105){
 				dr[dd].className = 'direction255';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -270 || a == 90){
+			}else if(aa == -270 || aa == 90){
 				dr[dd].className = 'direction270';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -285 || a == 75){
+			}else if(aa == -285 || aa == 75){
 				dr[dd].className = 'direction285';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -300 || a == 60){
+			}else if(aa == -300 || aa == 60){
 				dr[dd].className = 'direction300';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -315 || a == 45){
+			}else if(aa == -315 || aa == 45){
 				dr[dd].className = 'direction315';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -330 || a == 30){
+			}else if(aa == -330 || aa == 30){
 				dr[dd].className = 'direction330';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)
 					.addTo(map);
-			}else if(a == -345 || a == 15){
+			}else if(aa == -345 || aa == 15){
 				dr[dd].className = 'direction345';
 				new mapboxgl.Marker(dr[dd], {draggable: true})
 					.setLngLat(lnglat)

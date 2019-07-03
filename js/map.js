@@ -6,8 +6,9 @@ const map = new mapboxgl.Map({
 	zoom: 16.0,
 	doubleClickZoom: false,
     dragRotate: false,
-    preserveDrawingBuffer: true
+    preserveDrawingBuffer: true,
 });
+
 
 map.addControl(Draw, 'top-right');
 
@@ -38,27 +39,19 @@ function nameget(){
        target.innerHTML = n;
 }   
 
-
-
-
-
-
-
 function direction(d){
     if (d == "right"){
-        a = a -15;
-        map.rotateTo(a);
+        aa = aa -15;
+        map.rotateTo(aa);
     } else if (d =="left"){
-        a = a + 15;
-        map.rotateTo(a);
+        aa = aa + 15;
+        map.rotateTo(aa);
     } else if (d == "reset"){
-        a = 0;
-        map.rotateTo(a);
+        aa = 0;
+        map.rotateTo(aa);
+    } else if(aa == 360 || aa == -360){
+        aa = 0;
     }
-
-        if(a == 360 || a == -360){
-            a = 0;
-        }
 }
 
 var zoom = 16.5;
