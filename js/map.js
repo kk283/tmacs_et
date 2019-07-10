@@ -93,4 +93,80 @@ if(show_hidden.style.display=="block"){
 }
 }
 
+$('#downloadLink').click(function() {
+
+	var img = map.getCanvas().toDataURL('image/png');
+	this.href = img;
+	
+	map.once('render', () => {
+		var img = map.getCanvas().toDataURL('image/png'); 
+		this.href = img;
+	});
+});
+
+function getDisplayImage(){
+html2canvas($("#map"), {
+	onrendered: function(canvas) {
+		theCanvas = canvas;
+		document.body.appendChild(canvas);
+
+		console.log(canvas.toDataURL());
+
+		// Convert and download as image 
+		Canvas2Image.saveAsPNG(canvas); 
+		$("#img-out").append(canvas);
+		
+		console.log(canvas);
+		// Clean up 
+		document.body.removeChild(canvas);
+	   $('body').text(canvas.toDataURL());
+	   $('body').html('<img src="'+canvas.toDataURL()+'"/>');
+
+	}
+});
+
+
+
+
+console.log(map.getCanvas());
+
+var img = map.getCanvas().parent().toDataURL();
+
+$('body').html('<img src="'+img+'"/>');
+}
+
+
+map.on('load', function () {
+
+// アイコン画像設定
+map.loadImage('js/direction0.png', function (error, res) {
+map.addImage('sample', res);
+});
+
+// アイコン設定
+map.addSource('symbol_sample', {
+type: 'geojson',
+data: {
+"type": "Feature",
+"geometry": {
+	"type": "Point",
+	"coordinates": [138.943020, 37.866620]
+}
+}
+});
+
+// スタイル設定
+map.addLayer({
+"id": "symbol_sample",
+"type": "symbol",
+"source": "symbol_sample",
+"layout": {
+"icon-image": "sample",
+"icon-allow-overlap": true,
+"icon-size": 1.00
+},
+"paint": {}
+});
+});
+
 

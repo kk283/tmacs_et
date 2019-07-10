@@ -285,15 +285,9 @@
 	<script type="text/javascript" src="js/icon.js"></script>
 	<script type="text/javascript" src="js/edit.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
-	<script>
-		var a = 0;
-	    $('#downloadLink').click(function() {
 
-        	var img = map.getCanvas().toDataURL('image/png');
-        	this.href = img;
-		});
-		  
-	</script>
+	 <input id="downloadImageButton" style="width:120px;" type="button" value="画像保存" onclick="getDisplayImage();" >
+	 <a id="getImage" href=""  style="display:none;"  download="image.png">画像保存</a>
 	 </div>
 
 	

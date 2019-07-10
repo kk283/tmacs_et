@@ -45,31 +45,33 @@
 }
 
 .marker1 {
-  background-image: url('icon1.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
+  width:30px;
+  height: 30px;
+  display: block;
+  border-radius: 15px;
   cursor: pointer;
+  padding: 0;
+  border:5px solid black;
 }
 
-.marker2 {
-  background-image: url('icon2.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
+.marker2{
+  width:30px;
+  height: 30px;
+  display: block;
+  border-radius: 15px;
   cursor: pointer;
+  padding: 0;
+  border:15px solid black;
 }
 
 
-.direction0 {
-  background-image: url('direction/direction0.svg');
+
+.direction0{
+  background-image: url('direction/direction360.svg');
   background-size: cover;
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .direction15 {
@@ -78,7 +80,6 @@
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .direction30 {
@@ -87,7 +88,6 @@
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  cursor: pointer;
 }
 .direction45 {
   background-image: url('direction/direction45.svg');
