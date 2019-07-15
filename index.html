@@ -12,8 +12,8 @@
 	<script type="text/javascript" src="js/multiple-select.min.js"></script>
 	<link href='css/index.css' rel='stylesheet'>
 	<link rel="stylesheet" href='css/printer.css' media="print" type="text/css">
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 	<script src = ' https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.4/mapbox-gl-draw.js'> </script>
 	<script src="js/tactileGraph.min.js"></script>
 	<script src="js/html2canvas.js"></script>
@@ -104,6 +104,7 @@
 			</div>
 		</div>
 	</header>
+	<input type="button" class="btn btn-primary" id="downloadLink" value="保存">
 	<div class="container-fluid">
 		<div class = "row">
 		<div class= col-lg-8>
@@ -264,8 +265,7 @@
 										</td>
 										<td class="text-left">
 											<label class="btn btn-primary">
-												<input class="btn btn-primary" type="button" value="印刷" onclick="window.print();" />
-												<a class="downloadLink" id="downloadLink" href="" download="map.png">保存 </a>
+												<input type = "button"  class="btn btn-primary" value="印刷" onclick="window.print();" >
 											</label>
 										</td>
 									</tr>
@@ -277,25 +277,11 @@
 			</div>
 		</div>
 	</div>
-    <div id="image"></div>
-
-	
 	<script type="text/javascript" src="js/function.js"></script>
 	<script type="text/javascript" src="js/map.js"></script>
 	<script type="text/javascript" src="js/icon.js"></script>
 	<script type="text/javascript" src="js/edit.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
-	<script>
-		var a = 0;
-	    $('#downloadLink').click(function() {
-
-        	var img = map.getCanvas().toDataURL('image/png');
-        	this.href = img;
-		});
-		  
-	</script>
-	 </div>
-
 	
 	
 </body>

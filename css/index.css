@@ -1,3 +1,8 @@
+
+.html2canvas-container { 
+  width: 900px !important; height: 600px !important;
+}
+
 .box11{
   padding: 1em 1em;
   margin: 2em 0.5em;
@@ -11,8 +16,9 @@
   padding: 0;
 }
 
-
-.map {width:900px; height:600px; }
+.map {
+  width:900px; height:600px;
+}
 
 .mapboxgl-accessibility-marker {
   background: transparent;
@@ -45,217 +51,654 @@
 }
 
 .marker1 {
-  background-image: url('icon1.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
+  width:30px;
+  height: 30px;
+  display: block;
+  border-radius: 15px;
   cursor: pointer;
+  padding: 0;
+  border:5px solid black;
 }
 
-.marker2 {
-  background-image: url('icon2.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
+.marker2{
+  width:30px;
+  height: 30px;
+  display: block;
+  border-radius: 15px;
   cursor: pointer;
+  padding: 0;
+  border:15px solid black;
 }
 
+
+
+
+
+.direction0::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(8px) translateY(10px) rotate(-45deg); 
+}
 
 .direction0 {
-  background-image: url('direction/direction0.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
+}
+
+.direction0::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px);
+}
+
+
+.direction15::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(9px) translateY(10px) rotate(-30deg); 
 }
 
 .direction15 {
-  background-image: url('direction/direction15.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
+}
+
+.direction15::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(15deg);
+}
+
+.direction30::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(10px) translateY(10px) rotate(-15deg); 
 }
 
 .direction30 {
-  background-image: url('direction/direction30.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction30::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(30deg);
+}
+
+.direction45::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(9px) translateY(10px) rotate(0deg); 
+}
+
 .direction45 {
-  background-image: url('direction/direction45.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction45::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(45deg);
+}
+
+.direction60::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(20px) translateY(10px) rotate(15deg); 
+}
+
 .direction60 {
-  background-image: url('direction/direction60.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction60::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(10px) rotate(60deg);
+}
+
+.direction75::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(30px)  translateY(10px) rotate(30deg); 
+}
+
 .direction75 {
-  background-image: url('direction/direction75.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction75::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(35px) translateY(5px) rotate(75deg);
+}
+
+.direction90::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(30px) translateY(10px) rotate(45deg); 
+}
+
 .direction90 {
-  background-image: url('direction/direction90.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction90::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(35px) translateY(5px) rotate(90deg);
+}
+
+.direction105::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(30px) translateY(10px) rotate(60deg); 
+}
+
 .direction105 {
-  background-image: url('direction/direction105.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction105::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(35px) translateY(5px) rotate(105deg);
+}
+
+.direction120::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(20px) translateY(10px) rotate(75deg); 
+}
+
 .direction120 {
-  background-image: url('direction/direction120.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction120::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(120deg);
+}
+
+
+.direction135::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(15px) translateY(5px) rotate(90deg); 
+}
+
 .direction135 {
-  background-image: url('direction/direction135.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction135::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(135deg);
+}
+
+.direction150::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(15px) translateY(7px) rotate(105deg); 
+}
+
 .direction150 {
-  background-image: url('direction/direction150.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction150::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(150deg);
+}
+
+.direction165::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(13px) translateY(7px) rotate(120deg); 
+}
+
 .direction165 {
-  background-image: url('direction/direction165.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction165::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(165deg);
+}
+
+.direction180::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(13px) translateY(7px) rotate(135deg); 
+}
+
 .direction180 {
-  background-image: url('direction/direction180.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction180::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(180deg);
+}
+
+.direction195::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(13px) translateY(7px) rotate(150deg); 
+}
+
 .direction195 {
-  background-image: url('direction/direction195.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction195::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(195deg);
+}
+
+.direction210::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(13px) translateY(7px) rotate(165deg); 
+}
+
 .direction210 {
-  background-image: url('direction/direction210.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction210::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(25px) translateY(0px) rotate(210deg);
+}
+
+.direction225::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(13px) translateY(5px) rotate(180deg); 
+}
+
 .direction225 {
-  background-image: url('direction/direction225.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction225::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(28px) translateY(0px) rotate(225deg);
+}
+
+.direction240::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(0px) translateY(10px) rotate(195deg); 
+}
+
 .direction240 {
-  background-image: url('direction/direction240.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction240::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(17px) translateY(5px) rotate(240deg);
+}
+
+
+.direction255::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(0px) translateY(12px) rotate(210deg); 
+}
+
 .direction255 {
-  background-image: url('direction/direction255.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction255::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(7px) rotate(255deg);
+}
+
+.direction270::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(0px) translateY(12px) rotate(225deg); 
+}
+
 .direction270 {
-  background-image: url('direction/direction270.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction270::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(7px) rotate(270deg);
+}
+
+.direction285::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(0px) translateY(12px) rotate(240deg); 
+}
+
 .direction285 {
-  background-image: url('direction/direction285.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction285::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(285deg);
+}
+
+.direction300::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(0px) translateY(10px) rotate(255deg); 
+}
+
 .direction300 {
-  background-image: url('direction/direction300.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction300::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(300deg);
+}
+
+.direction315::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(3px) translateY(10px) rotate(270deg); 
+}
+
 .direction315 {
-  background-image: url('direction/direction315.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction315::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(315deg);
+}
+
+.direction330::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(5px) translateY(8px) rotate(285deg); 
+}
+
 .direction330 {
-  background-image: url('direction/direction330.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
 }
+
+.direction330::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(330deg);
+}
+
+.direction345::before {
+  position: absolute;
+  content:"";
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color:  #000000 #000000 transparent transparent ;
+  transform: translateX(5px) translateY(8px) rotate(300deg); 
+}
+
 .direction345 {
-  background-image: url('direction/direction345.svg');
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  cursor: pointer;
+  position:relative;
+  height:1px;
+  width:1px;
+  background-color:#ffffff;
+}
+
+.direction345::after {
+  position: absolute;
+  content:"";
+  height:40px;
+  width:5px;
+  background-color:#000000;
+  transform: translateX(20px) translateY(10px) rotate(345deg);
 }
 .downloadLink{
   color: #ffffff;

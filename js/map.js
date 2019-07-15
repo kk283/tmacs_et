@@ -5,12 +5,9 @@ const map = new mapboxgl.Map({
 	center: [138.943020, 37.866620],
 	zoom: 16.0,
 	doubleClickZoom: false,
-    dragRotate: false,
-    preserveDrawingBuffer: true,
+    preserveDrawingBuffer: true
 });
 
-
-map.addControl(Draw, 'top-right');
 
 var Draw = new MapboxDraw({
     displayControlsDefault: false,
@@ -43,14 +40,21 @@ function direction(d){
     if (d == "right"){
         aa = aa -15;
         map.rotateTo(aa);
+        if(aa == 360 || aa == -360){
+            aa = 0;
+        }
     } else if (d =="left"){
         aa = aa + 15;
         map.rotateTo(aa);
+        if(aa == 360 || aa == -360){
+            aa = 0;
+        }
     } else if (d == "reset"){
         aa = 0;
         map.rotateTo(aa);
-    } else if(aa == 360 || aa == -360){
-        aa = 0;
+        if(aa == 360 || aa == -360){
+            aa = 0;
+        }
     }
 }
 
@@ -93,4 +97,24 @@ if(show_hidden.style.display=="block"){
 }
 }
 
+$('#downloadLink').click(function() {
+    // 2 following lines works but without dom elements
+    //var img = map.getCanvas().toDataURL('image/png');
+    //this.href = img;
+  
+    html2canvas($('#map')[0], {
+        useCORS: true,
+        allowTaint: true
+      })
+      .then(function(canvas) {
+        var img = canvas.toDataURL('image/png');
+        var link = document.createElement('a');
+        link.href = img;
+        link.download = "map.png";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+  
+  })
 

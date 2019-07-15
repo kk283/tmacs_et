@@ -5,7 +5,7 @@ var dd = 1;
 var d = 0;
 var el = new Array(i);
 var popup = new Array(p);
-var dr = new Array(d);
+var dr = new Array(dd);
 var aa = 0;
 var editType;
 
@@ -39,14 +39,13 @@ function onMapClick(e) {
 			new mapboxgl.Marker(el[i], {draggable: true})
 				.setLngLat(lnglat)
 				.addTo(map);
-				var MapM = map.getStyle().layers;
-			console.log(MapM);
-		} else{
+		} else if(ma == "icon2"){
 			el[i] = document.createElement('div');
 			el[i].className = 'marker2';
 			new mapboxgl.Marker(el[i], {draggable: true})
 				.setLngLat(lnglat)
 				.addTo(map);
+			el[i].style.taransform = el.style.transform + rotate("50deg");
 		}} else if(editType == 'brail'){
 		const n = document.getElementById('nameG').value;
 		const Re_n = tactileGraphic().convertText(n);
@@ -62,7 +61,7 @@ function onMapClick(e) {
 	} else if(editType == 'ink'){
 		const ink = document.getElementById('nameI').value;
 		ink_i = ink_i + 2;
-		lnglat = e.lngLat;
+		lnglat = e.lngLat
 		popup[ink_i] = new mapboxgl.Popup({closeOnClick: false, closeButton: false, className: 'popupInk'})
 	    	.setLngLat(lnglat)
 			.setHTML(ink)
@@ -72,11 +71,10 @@ function onMapClick(e) {
 		dd = dd + 1;
 		lnglat = e.lngLat;
 		dr[dd] = document.createElement('div');
-		console.log(aa);
 		if(aa == 0){
 			dr[dd].className = 'direction0';
 			new mapboxgl.Marker(dr[dd], {draggable: true})
-			    .setLngLat(lnglat)
+				.setLngLat(lnglat)
 				.addTo(map);
 			} else if (aa == -15 || aa == 355){
 				dr[dd].className = 'direction15';
@@ -231,4 +229,3 @@ function onDragend(){
 	coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
 }
 
-marker.on('dragend', onDragEnd);
