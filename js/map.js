@@ -76,14 +76,6 @@ function zoomL(z){
 }
 
 
-var swatches = document.getElementById('swatches');
-var colors = [
-'#ffffff',
-'#1a1a1a',
-'#000000'
-];
-
-
 
 function clickBtn1(){
 const show_hidden = document.getElementById("show_hidden");
@@ -97,7 +89,10 @@ if(show_hidden.style.display=="block"){
 }
 }
 
-$('#downloadLink').click(function() {
+
+$('#downloadLink').click(
+    function() {
+    
     // 2 following lines works but without dom elements
     //var img = map.getCanvas().toDataURL('image/png');
     //this.href = img;
@@ -116,5 +111,8 @@ $('#downloadLink').click(function() {
         document.body.removeChild(link);
       });
   
-  })
+  });
 
+
+
+  

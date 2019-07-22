@@ -39,6 +39,19 @@ function colorChange(color){
             } else if(color == 'ON'){
                 map.setLayoutProperty(layer[l], 'visibility', 'visible');
             }
+        }else if(layer[l] == 'background'){
+            if(color == 'white'){
+                map.setPaintProperty(layer[l], 'background-color', '#ffffff');
+            } else if(color == 'gray'){
+                map.setPaintProperty(layer[l], 'background-color', '#424242');
+            } else if(color == 'black'){
+                map.setPaintProperty(layer[l], 'background-color', '#000000');
+            }else if(color == 'OFF'){
+                map.setLayoutProperty(layer[l], 'visibility', 'none');
+            } else if(color == 'ON'){
+                map.setLayoutProperty(layer[l], 'visibility', 'visible');
+            }
         }
+
     }
 }

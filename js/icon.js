@@ -45,7 +45,6 @@ function onMapClick(e) {
 			new mapboxgl.Marker(el[i], {draggable: true})
 				.setLngLat(lnglat)
 				.addTo(map);
-			el[i].style.taransform = el.style.transform + rotate("50deg");
 		}} else if(editType == 'brail'){
 		const n = document.getElementById('nameG').value;
 		const Re_n = tactileGraphic().convertText(n);

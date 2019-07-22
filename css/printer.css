@@ -5,10 +5,13 @@ body {
 
 }
 
-.map { 
+#map { 
   top:0; 
   bottom:0;
+  width:950px; 
+  height:700px;
   zoom: 1.5;
+
 }
 .contents{position: abusolute; left:100px; top:100px;}
 
