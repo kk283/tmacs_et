@@ -18,6 +18,9 @@ function BIword(){
 	}else if(editType=='marker'){
 		BIshow.style.display ="none";
 		Mshow.style.display = "block"
+	}else{
+		BIshow.style.display ="none";
+		Mshow.style.display = "none"
 	}
 }
  

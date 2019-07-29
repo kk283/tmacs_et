@@ -58,7 +58,8 @@ function direction(d){
     }
 }
 
-var zoom = 16.5;
+var zoom = 16;
+var scale;
 
 function zoomL(z){
     zoom = map.getZoom();
@@ -66,16 +67,41 @@ function zoomL(z){
     if (z == "0.5"){
         zoom = zoom + 0.5;
         map.setZoom(zoom);
+        target = document.getElementById("output");
+        scale = map.getCenter();
+        //https://blogs.bing.com/maps/2006/02/25/map-control-zoom-levels-gt-resolution/を参考//
+        let scaleV = Math.round((96*39.37*156543.04*Math.cos(scale.lat*Math.PI/180))/Math.pow(2, zoom));
+        target.innerHTML = scaleV;
+    } else if(z == 0.1){
+        zoom = zoom + 0.1;
+        map.setZoom(zoom);
+        target = document.getElementById("output");
+        scale = map.getCenter();
+        let scaleV = Math.round((96*39.37*156543.04*Math.cos(scale.lat*Math.PI/180))/Math.pow(2, zoom));
+        target.innerHTML = scaleV;
     } else if(z == -0.5){
         zoom = zoom -0.5;
         map.setZoom(zoom);
-    } else if (z == 16.5){
-        zoom = 16.5;
+        target = document.getElementById("output");
+        scale = map.getCenter();
+        let scaleV = Math.round((96*39.37*156543.04*Math.cos(scale.lat*Math.PI/180))/Math.pow(2, zoom));
+        target.innerHTML = scaleV;
+    } else if(z == -0.1){
+        zoom = zoom - 0.1;
         map.setZoom(zoom);
+        target = document.getElementById("output");
+        scale = map.getCenter();
+        let scaleV = Math.round((96*39.37*156543.04*Math.cos(scale.lat*Math.PI/180))/Math.pow(2, zoom));
+        target.innerHTML = scaleV;
+    } else if (z == 16){
+        zoom = 16;
+        map.setZoom(zoom);
+        target = document.getElementById("output");
+        scale = map.getCenter();
+        let scaleV = Math.round((96*39.37*156543.04*Math.cos(scale.lat*Math.PI/180))/Math.pow(2, zoom));
+        target.innerHTML = scaleV;
     }
 }
-
-
 
 function clickBtn1(){
 const show_hidden = document.getElementById("show_hidden");

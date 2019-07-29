@@ -1,13 +1,3 @@
-function lineonoff(onoff){
-    var layerONOFF = document.getElementById('layer');
-    if(onoff == 'ON'){
-        map.setLayoutProperty(layer.value, 'visibility', 'visible');
-    }else if(onoff == 'OFF'){
-        map.setLayoutProperty(layer.value, 'visibility', 'none');
-       
-    }
-}
- 
 function colorChange(color){
     var $select = $('#layer');
     var layer = [];
