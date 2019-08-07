@@ -14,13 +14,20 @@ function BIword(){
 	if(editType == 'brail' || editType == 'ink'){
 		const BI_show = document.getElementById("BIshow");
 		BIshow.style.display ="block";
-		Mshow.style.display = "none"
+		Mshow.style.display = "none";
+		routes.style.display = "none"
 	}else if(editType=='marker'){
 		BIshow.style.display ="none";
-		Mshow.style.display = "block"
-	}else{
+		Mshow.style.display = "block";
+		routes.style.display = "none";
+	}else if(editType=='route'){
 		BIshow.style.display ="none";
-		Mshow.style.display = "none"
+		Mshow.style.display = "none";
+		routes.style.display = "block";
+	}else {
+		BIshow.style.display ="none";
+		Mshow.style.display = "none";
+		routes.style.display = "none";
 	}
 }
  
@@ -194,6 +201,8 @@ function onMapClick(e) {
 					.setLngLat(lnglat)
 					.addTo(map);
 			}
+		}else if(editType == 'route'){
+			map.on('click', go);
 		}
 		
     }
@@ -216,18 +225,9 @@ function remove() {
 	} else if(editType == 'dr'){
     	dr[dd].remove();
     	dd = dd - 1;
-    }
+    } else if(editType == 'route'){
+		document.getElementById('remove').onclick = clearMap;
+	}
  }
 
- function onDragEnd() {
-	var lngLat = marker.getLngLat();
-	coordinates.style.display = 'block';
-	coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-}
-
-function onDragend(){
-	var  lngLat = popup.getLngLat();
-	coordinates.style.display = 'block';
-	coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-}
 

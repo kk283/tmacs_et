@@ -14,10 +14,12 @@
 	<link rel="stylesheet" href='css/printer.css' media="print" type="text/css">
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
-	<script src = ' https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.4/mapbox-gl-draw.js'> </script>
+	<script src = 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.4/mapbox-gl-draw.js'> </script>
 	<script src="js/tactileGraph.min.js"></script>
 	<script src="js/html2canvas.js"></script>
-
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.js'></script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.css' type='text/css' />
+    <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 	<style>
 			
     	@font-face {
@@ -68,13 +70,15 @@
 		</div>
 	</header>
 		
-		<div class = "row">
-		<div class= col-lg-8>
-				<div id="map"></div>
+	<div class = "row">
+		<div class= "col-md-8">
+			<div class="card" id="card1" >
+			<div id="map"></div>
+			</div>
 		</div>
 
 		<div class="col-lg-4">
-			<div class="card"></div>
+			<div class="card">
 			<div class = "noprint">
 				<div class="card card-primary h-50">
 					<div class ="card-heading bg-primary text-white h-50" >
@@ -160,9 +164,10 @@
 															<option value ='ink'>墨字</option>
 															<option value ='marker'>マーカー</option>
 															<option value ='dr'>方角</option>>
+															<option value ='route'>経路案内</option>>
 														</select>
 
-														<button class="btn btn-primary" type="button" id="remove">削除</button>
+														<button class="btn btn-primary" type="button" id="remove" href='#'>削除</button>
 													</div>
 												</span>
 												<div id = "BIshow">
@@ -173,6 +178,12 @@
 													<form id = "Mchecked">
 														<input type="radio"   name ="markerselect" value="icon1">円
 														<input type="radio"   name ="markerselect" value="icon2">黒丸
+													</form>
+												</div>
+												<div id = "routes">
+													<form id = "routeS">
+														<input type="radio"   name ="routeselect" value="walking">徒歩
+														<input type="radio"   name ="routeselect" value="driving">車
 													</form>
 												</div>
 											</div>
@@ -248,14 +259,17 @@
 					</div>
 				</div>
 			</div>
+			</div>
 		</div>
 	</div>
+
 	<script type="text/javascript" src="js/function.js"></script>
 	<script type="text/javascript" src="js/map.js"></script>
 	<script type="text/javascript" src="js/icon.js"></script>
 	<script type="text/javascript" src="js/edit.js"></script>
-	<script type="text/javascript" src="js/search.js">
-	</script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/route.js"></script>
+	
 	
 	
 </body>

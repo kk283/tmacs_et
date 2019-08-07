@@ -3,6 +3,7 @@ var mytap = window.ontouchstart===null?"touchstart":"click";
 document.getElementById("show_hidden").style.display ="none";
 document.getElementById("BIshow").style.display ="none";
 document.getElementById("Mshow").style.display ="none";
+document.getElementById("routes").style.display = "none";
 
 function init(){
 
