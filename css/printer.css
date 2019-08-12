@@ -8,8 +8,8 @@ body {
 #map { 
   top:0; 
   bottom:0;
-  width:950px; 
-  height:700px;
+  width:900px; 
+  height:600px;
   zoom: 1.5;
 
 }
