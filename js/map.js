@@ -23,7 +23,7 @@ function backmap(BM){
         map.setStyle("mapbox://styles/kk765/cjwixstr31os91cqo9n9xaave");
         document.getElementsByTagName('div').item(str).className = 'mapB';
     } else if(BM == "EasyTactix"){
-        map.setStyle("mapbox://styles/kk765/cjwlo0tx648hx1cqonr4vnf2i");
+        map.setStyle("mapbox://styles/kk765/ck1ucm9j80n9u1co5vxc2b844");
         document.getElementsByTagName('div').item(str).className = 'mapE';
     } else if(BM == "defaultmap"){
         map.setStyle("mapbox://styles/kk765/cjwubcqw80eds1cjx6gkd6fdc")
@@ -101,6 +101,7 @@ function zoomL(z){
         let scaleV = Math.round((96*39.37*156543.04*Math.cos(scale.lat*Math.PI/180))/Math.pow(2, zoom));
         target.innerHTML = scaleV;
     }
+    console.log(zoom);
 }
 
 function clickBtn1(){
