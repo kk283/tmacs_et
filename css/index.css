@@ -42,23 +42,23 @@
 }
 
 .marker1 {
-  width:30px;
-  height: 30px;
+  width:15px;
+  height: 15px;
   display: block;
-  border-radius: 15px;
+  border-radius: 7.5px;
   cursor: pointer;
   padding: 0;
-  border:2.5px solid black;
+  border:1.25px solid black;
 }
 
 .marker2{
-  width:30px;
-  height: 30px;
+  width:15px;
+  height: 15px;
   display: block;
-  border-radius: 15px;
+  border-radius: 7.5px;
   cursor: pointer;
   padding: 0;
-  border:15px solid black;
+  border:7.5px solid black;
 }
 
 
