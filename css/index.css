@@ -42,13 +42,13 @@
 }
 
 .marker1 {
-  width:15px;
-  height: 15px;
+  width:30px;
+  height: 30px;
   display: block;
-  border-radius: 7.5px;
+  border-radius: 15px;
   cursor: pointer;
   padding: 0;
-  border:1.25px solid black;
+  border:2.5px solid black;
 }
 
 .marker2{
