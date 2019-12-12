@@ -1,8 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2s3NjUiLCJhIjoiY2pvNWNyM2VnMDhsNTNwbzE4b3lsMnRwdCJ9.M8N9yT5iYqbq-WJsGffOxQ';
 const map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/kk765/cjwixstr31os91cqo9n9xaave',
-	center: [139.061808, 37.912119],
+	style: 'mapbox://styles/kk765/ck42f5e2t0mcw1cl5l55c5m0d',
+	center: [-74.50, 40],
 	zoom: 16.0,
 	doubleClickZoom: false,
     preserveDrawingBuffer: true
@@ -20,10 +20,10 @@ var Draw = new MapboxDraw({
 
 function backmap(BM){
     if(BM == "backmaps"){
-        map.setStyle("mapbox://styles/kk765/cjwixstr31os91cqo9n9xaave");
+        map.setStyle("mapbox://styles/kk765/ck42f5e2t0mcw1cl5l55c5m0d");
         document.getElementsByTagName('div').item(str).className = 'mapB';
     } else if(BM == "EasyTactix"){
-        map.setStyle("mapbox://styles/kk765/ck1ucm9j80n9u1co5vxc2b844");
+        map.setStyle("mapbox://styles/kk765/ck42f71a616nk1cplfwd3689y");
         document.getElementsByTagName('div').item(str).className = 'mapE';
     } else if(BM == "defaultmap"){
         map.setStyle("mapbox://styles/kk765/cjwubcqw80eds1cjx6gkd6fdc")
