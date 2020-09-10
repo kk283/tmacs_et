@@ -63,6 +63,12 @@ function init(){
 	});
 
 	$(function() {
+		$('#linedraw input[type=button]').on("click", function() { 
+			draw(this.id);
+		});
+	});
+
+	$(function() {
 		$('#zoomL input[type=button]').on("click", function() { 
 			zoomL(this.id);
 		});
@@ -93,11 +99,17 @@ function init(){
 		});
 	});
 
+	$(function(){
+		$('#auto input[type=button]').on('click',function(){
+			auto(this.id);
+		});
+	});
+
 	$(function () {
         $('#layer').multipleSelect({
             width: 250,
-            placeholder:"選択して下さい",
-			selectAllText:"全部選ぶ",
+            placeholder:"編集する道路情報を選択",
+			selectAllText:"すべて選ぶ",
             multipleWidth: 200
         });
 	});

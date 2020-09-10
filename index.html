@@ -12,14 +12,16 @@
 	<script type="text/javascript" src="js/multiple-select.min.js"></script>
 	<link href='css/index.css' rel='stylesheet'>
 	<link rel="stylesheet" href='css/printer.css' media="print" type="text/css">
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
-	<script src = 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.4/mapbox-gl-draw.js'> </script>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css' rel='stylesheet' />
+	<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js"></script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
 	<script src="js/tactileGraph.min.js"></script>
 	<script src="js/html2canvas.js"></script>
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.js'></script>
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.css' type='text/css' />
-    <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+	<script src="https://d3js.org/d3-queue.v3.min.js"></script>
+	<script src="https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js"></script>
 	<style>
 			
     	@font-face {
@@ -57,15 +59,14 @@
 			border: none;
 			cursor: pointer;
 		}
-		.marker {
-      background-color:#F86767;
-      width:40px;
-      height:40px;
-      border-radius:50%;
-      box-shadow:0 0 2px rgba(0,0,0,0.25);
-      border:3px solid #fff;
-      cursor:pointer;
-      }
+		.distance-container {
+position: absolute;
+top: 10px;
+left: 10px;
+z-index: 1;
+color: #ffffff;
+}
+
 	</style>
 </head>
   
@@ -173,10 +174,9 @@
 															<option value ='brail'>点字</option>
 															<option value ='ink'>墨字</option>
 															<option value ='marker'>マーカ</option>
-															<option value ='dr'>方角</option>>
-															<option value ='route'>経路案内</option>>
+															<option value ='dr'>方角</option>
+															<option value ='route'>経路案内</option>
 														</select>
-
 														<button class="btn btn-primary" type="button" id="remove" href='#'>削除</button>
 													</div>
 												</span>
@@ -198,6 +198,15 @@
 												</div>
 											</div>
 											<br>
+											<div class="contents">線の自動表示<br>ON:縮尺で自動的に表示する線が調整される。<br>OFF:下の選択欄で表示する道路を選択可能。</div>
+											<div  class="btn-group" data-toggle="buttons"  id="auto">
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="autoon" value="ON"> 
+												</label>
+												<label class="btn btn-primary">
+													<input type="button" class="btn btn-primary" name="options"  id="autooff" value="OFF"> 
+												</label>
+											</div>
 											<div>
 												<select id='layer' name= 'layer' multiple="multiple">
 													<option value='building'>建物</option>
@@ -218,19 +227,19 @@
 			
 												<div  class="btn-group" data-toggle="buttons"  id="color">
 													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="OFF" value="OFF"> 
+														<input type="button" class="btn btn-primary" name="options"  id="OFF" value="非表示"> 
 													</label>
 													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="ON" value="ON"> 
+														<input type="button" class="btn btn-primary" name="options"  id="ON" value="表示"> 
+													</label>
+													<label class="btn btn-primary">
+														<input type="button" class="btn btn-primary" name="options"  id="black" value="黒"> 
 													</label>
 													<label class="btn btn-primary">
 														<input type="button" class="btn btn-primary" name="options"  id="white" value="白"> 
 													</label>
 													<label class="btn btn-primary">
 														<input type="button" class="btn btn-primary" name="options"  id="gray" value="灰色"> 
-													</label>
-													<label class="btn btn-primary">
-														<input type="button" class="btn btn-primary" name="options"  id="black" value="黒"> 
 													</label>
 												</div>
 											</div>
@@ -274,6 +283,7 @@
 			</div>
 		</div>
 	</div>
+	<div id="distance" class="distance-container"></div>
 
 	<script type="text/javascript" src="js/map.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
@@ -281,9 +291,7 @@
 	<script type="text/javascript" src="js/edit.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
 	<script type="text/javascript" src="js/route.js"></script>
-	
-	
-	
+
 </body>
 
 </html>

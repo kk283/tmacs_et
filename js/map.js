@@ -8,15 +8,16 @@ const map = new mapboxgl.Map({
     preserveDrawingBuffer: true
 });
 
+//var Draw = new MapboxDraw({
+//    displayControlsDefault: false,
+//    controls: {
+//        point: true,
+//        line_string: true,
+//       trash: true
+//    }
+//});
+//map.addControl(Draw)
 
-var Draw = new MapboxDraw({
-    displayControlsDefault: false,
-    controls: {
-        point: true,
-        line_string: true,
-        trash: true
-    }
-});
 
 function backmap(BM){
     if(BM == "backmaps"){
@@ -116,6 +117,14 @@ if(show_hidden.style.display=="block"){
 }
 }
 
+function auto(A){
+    if (A == "autoon"){
+        map.setStyle("mapbox://styles/kk765/ck42f5e2t0mcw1cl5l55c5m0d");
+
+    } else if (A == "autooff"){
+        map.setStyle("mapbox://styles/kk765/ckeutqw2e0ky919jsnyix0x1x");
+    }
+}
 
 $('#downloadLink').click(
     function() {
@@ -141,5 +150,4 @@ $('#downloadLink').click(
   });
 
 
-
-  
+    
