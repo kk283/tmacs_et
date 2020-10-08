@@ -35,7 +35,6 @@ function onMapClick(e) {
       //地図のclickイベント呼び出される
 	  //クリック地点の座標にマーカーを追加、マーカーのclickイベントでonMarkerClick関数を呼び出し
 	editType = document.getElementById("edit").value;
-	console.log(editType); 
       	
     if(editType == 'marker'){
 		i = i + 1;
@@ -55,7 +54,20 @@ function onMapClick(e) {
 			new mapboxgl.Marker(el[i], {draggable: true})
 				.setLngLat(lnglat)
 				.addTo(map);
-		}} else if(editType == 'brail'){
+		}else if(ma == "icon3"){
+			el[i] = document.createElement('div');
+			el[i].className = 'marker3';
+			new mapboxgl.Marker(el[i], {draggable: true})
+				.setLngLat(lnglat)
+				.addTo(map);
+		}else if(ma == "icon4"){
+			el[i] = document.createElement('div');
+			el[i].className = 'marker4';
+			new mapboxgl.Marker(el[i], {draggable: true})
+				.setLngLat(lnglat)
+				.addTo(map);
+		}
+	} else if(editType == 'brail'){
 		const n = document.getElementById('nameG').value;
 		const Re_n = tactileGraphic().convertText(n);
 		p = p + 2;
@@ -203,15 +215,16 @@ function onMapClick(e) {
 			}
 		}else if(editType == 'route'){
 			map.on('click', go);
-		}
+		}else if(editType == 'linedraw'){
+			var langlat = e.langLat;
+			console.log(langlat);
 		
-    }
+    }}
     
     
     
 function remove() {
 	editType = document.getElementById("edit").value;
-	console.log(editType);
 
    	if(editType == 'marker'){
    		el[i].remove();
@@ -230,4 +243,7 @@ function remove() {
 	}
  }
 
+ em.addEventListener('dblclick', function(e){
+	em.remove();	
+});
 

@@ -61,6 +61,29 @@
   border:7.5px solid black;
 }
 
+.marker3{
+  width: 20px;
+  height: 20px;
+  background: black;
+}
+
+/* 中央白抜きの四角形
+.marker3{
+  padding: 10px 10px;
+  margin: 5px 0;
+  font-weight: bold;
+  border: solid 3px #000000;
+}
+*/
+
+.marker4{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 20px 12px;
+  border-color: transparent transparent #000000 transparent;
+}
+
 
 .direction0::before {
   position: absolute;
