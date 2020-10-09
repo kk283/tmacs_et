@@ -214,12 +214,8 @@ function onMapClick(e) {
 					.addTo(map);
 			}
 		}else if(editType == 'route'){
-			map.on('click', go);
-		}else if(editType == 'linedraw'){
-			var langlat = e.langLat;
-			console.log(langlat);
-		
-    }}
+			map.on('click', go(e));
+		}}
     
     
     
